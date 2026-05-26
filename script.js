@@ -5,7 +5,7 @@ window.DISCOUNT_CONFIG = {
     iran:    { code: "IRAN786", usd_percent: 60, inr_percent: 50 },
     special: { code: "OFFER5",  usd_percent: 5,  inr_percent: 10 },
     mega:    { code: "FREE100", usd_percent: 0,  inr_percent: 0 },
-    Rsb:     { code: "RSB", usd_percent: 95, inr_percent: 95 }
+    Rsb:     { code: "RSB", usd_percent: 95; }
 };
 
 // --- THEME TOGGLE ---

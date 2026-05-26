@@ -56,6 +56,7 @@ function togglePhase1Fields() {
     validatePhase1(); 
 }
 
+
 function validatePhase1() {
     const name = document.getElementById('client-name').value.trim();
     const email = document.getElementById('client-email').value.trim();
@@ -68,19 +69,13 @@ function validatePhase1() {
     let specificFieldValid = false;
     
     if (projectType === 'review') {
-        // Keeps URL validation (at least 5 characters)
-        specificFieldValid = document.getElementById('current-url').value.trim().length > 5;
-    } else {
-        // New word count validation: 5 words minimum for project details
-        const details = document.getElementById('project-details').value;
-        specificFieldValid = countWords(details) >= 5;
-    }
-
-    // Add validation for 'Changes Wanted' if user is in 'review' mode
-    if (projectType === 'review') {
+        const urlValid = document.getElementById('current-url').value.trim().length > 5;
         const changes = document.querySelector('textarea[name="Changes_Wanted"]').value;
         const changesValid = countWords(changes) >= 5;
-        specificFieldValid = specificFieldValid && changesValid;
+        specificFieldValid = urlValid && changesValid;
+    } else {
+        const details = document.getElementById('project-details').value;
+        specificFieldValid = countWords(details) >= 5;
     }
 
     const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);

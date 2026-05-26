@@ -743,3 +743,23 @@ footer span {
     border-radius: 8px;
     line-height: 1.4;
 }
+
+/* Add/Replace this in your styles.css */
+.btn-cancel { 
+    background: none; 
+    border: none; 
+    color: var(--text); 
+    width: 100%; 
+    margin-top: 15px; 
+    cursor: pointer; 
+    font-size: 0.9rem; 
+    opacity: 0.7;
+    padding: 10px;
+    transition: opacity 0.2s;
+    display: block !important; /* Ensures it overrides the 'none' rule */
+}
+
+.btn-cancel:hover {
+    opacity: 1;
+    text-decoration: underline;
+}

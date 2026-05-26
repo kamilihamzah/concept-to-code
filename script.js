@@ -62,17 +62,33 @@ function validatePhase1() {
     const projectType = document.querySelector('input[name="projectType"]:checked').value;
     const nextBtn = document.getElementById('next-btn');
     
+    // Helper to count words
+    const countWords = (str) => str.trim().split(/\s+/).filter(word => word.length > 0).length;
+
     let specificFieldValid = false;
+    
     if (projectType === 'review') {
+        // Keeps URL validation (at least 5 characters)
         specificFieldValid = document.getElementById('current-url').value.trim().length > 5;
     } else {
-        specificFieldValid = document.getElementById('project-details').value.trim().length > 10;
+        // New word count validation: 5 words minimum for project details
+        const details = document.getElementById('project-details').value;
+        specificFieldValid = countWords(details) >= 5;
+    }
+
+    // Add validation for 'Changes Wanted' if user is in 'review' mode
+    if (projectType === 'review') {
+        const changes = document.querySelector('textarea[name="Changes_Wanted"]').value;
+        const changesValid = countWords(changes) >= 5;
+        specificFieldValid = specificFieldValid && changesValid;
     }
 
     const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     const formIsValid = (name !== "" && isEmailValid && specificFieldValid);
+    
     if(nextBtn) nextBtn.disabled = !formIsValid;
 }
+
 
 // --- QUICK EMAIL BUTTONS ---
 function appendEmailDomain(domain) {

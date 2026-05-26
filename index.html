@@ -53,7 +53,7 @@
 <div class="form-wrapper">
     <div class="effect"></div>
 <section class="form-container">
-    <form id="mainForm" action="https://api.web3forms.com/submit" method="POST">
+<form id="mainForm" action="https://api.web3forms.com/submit" method="POST">
     <input type="hidden" name="access_key" value="347c16f5-f06c-457a-ad36-ebbf8584022c">
 
     <div id="step-1">
@@ -63,7 +63,7 @@
                 <label class="type-card">
                     <input type="radio" name="projectType" value="review" checked onchange="togglePhase1Fields()">
                     <div class="card-content">
-                         <span class="icon">🔍</span>
+                        <span class="icon">🔍</span>
                         <h3>Website Review</h3> 
                         <p>Performance audit and design refresh.</p>
                     </div>
@@ -125,7 +125,6 @@
                     Continue to Payment
                 </button>
             </div>
-
         </div> 
     </div>
     
@@ -170,12 +169,10 @@
                 </select>
                 <label>Select Package</label>
             </div>
+            
             <div id="improve-message" class="improvement-text"></div>
-            <select id="package-upi" onchange="applyDiscount(); validateUPI();">
-    </select>
-</div>
-		<div id="improve-message" class="text"></div>
-		<div class="qr-container">
+
+            <div class="qr-container">
                 <div class="qr-frame">
                     <img src="googlepay_qr.png" alt="UPI QR Code" id="display-qr">
                 </div>
@@ -201,7 +198,6 @@
         </div> 
         
         <button type="button" class="btn-cancel" onclick="cancelCheckout()">✖ Edit Project Details</button>
-</div>
     </div>
 </form>
 </div>

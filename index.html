@@ -171,8 +171,11 @@
                 <label>Select Package</label>
             </div>
             <div id="improve-message" class="improvement-text"></div>
-            
-            <div class="qr-container">
+            <select id="package-upi" onchange="applyDiscount(); validateUPI();">
+    </select>
+</div>
+		<div id="improve-message" class="text"></div>
+		<div class="qr-container">
                 <div class="qr-frame">
                     <img src="googlepay_qr.png" alt="UPI QR Code" id="display-qr">
                 </div>

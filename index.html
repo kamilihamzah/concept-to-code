@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concept to Code | Web Performance & Development</title>
+    
+    <meta name="description" content="Professional web optimization and development services. Improve your HTML, CSS, and WordPress site performance.">
+    <link rel="canonical" href="https://ctocweb.com/">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ctocweb.com/">
+    <meta property="og:title" content="Concept to Code | Web Performance & Development">
+    <meta property="og:description" content="Expert web optimization and custom development services to boost your site speed and user experience.">
+    <meta property="og:image" content="https://ctocweb.com/tab-icon.png">
+    
+    <link rel="icon" type="image/png" href="tab-icon.png">
+    <link rel="apple-touch-icon" href="tab-icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<nav>
+    <div class="logo">Concept<span>toCode</span></div>
+    
+    <div class="nav-right">
+        <div class="theme" id="theme-track-container">
+            <button id="theme-icon-btn">☀️</button>
+        </div>
+    </div>
+</nav>
+
+<header class="welcome-section">
+    <h1 lang="ar" dir="rtl">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</h1>
+    <h1>Transform Your Digital Vision into <span>High-Performance Code</span></h1>
+    <h2>Professional Web Optimization & Custom Development Services</h2>
+    <p>
+        Experience <i>seamless performance</i> and <b>modern design</b>. Whether you need to <em>optimize an existing site</em> for speed or build a brand-new landing page from scratch, I deliver 100% responsive, SEO-ready solutions tailored to your needs. <br>
+    </p>
+    <span class="ss">Let's
+        <span class="alter">
+            <h3>build</h3>
+            <h3>create</h3>
+            <h3>innovate</h3>
+        </span>
+    </span>
+</header>
+
+<div class="form-wrapper">
+    <div class="effect"></div>
+<section class="form-container">
+    <form id="mainForm" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="347c16f5-f06c-457a-ad36-ebbf8584022c">
+
+    <div id="step-1">
+        <div id="phase-1-content">
+            
+            <div class="project-type-selection">
+                <label class="type-card">
+                    <input type="radio" name="projectType" value="review" checked onchange="togglePhase1Fields()">
+                    <div class="card-content">
+                         <span class="icon">🔍</span>
+                        <h3>Website Review</h3> 
+                        <p>Performance audit and design refresh.</p>
+                    </div>
+                </label>
+                <label class="type-card">
+                    <input type="radio" name="projectType" value="scratch" onchange="togglePhase1Fields()">
+                    <div class="card-content">
+                        <span class="icon">🛠️</span>
+                        <h3>Build from Scratch</h3>
+                        <p>New custom project from zero.</p>
+                    </div>
+                </label>
+            </div>
+
+            <div id="selection-message-container" class="selection-message hidden">
+                <h4 id="selection-header"></h4>
+                <p id="selection-body"></p>
+                <p class="selection-cta" id="selection-cta"></p>
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="client-name" name="Client Name" class="input-field" placeholder=" " required oninput="validatePhase1()">
+                <label>Full Name</label>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="client-email" name="Email" class="input-field" placeholder=" " required oninput="validatePhase1()">
+                <label>Email Address</label>
+                <div class="email-btn-container">
+                    <button type="button" class="quick-email-btn" onclick="appendEmailDomain('@gmail.com')">@gmail.com</button>
+                    <button type="button" class="quick-email-btn" onclick="appendEmailDomain('@')">@</button>
+                    <button type="button" class="quick-email-btn" onclick="appendEmailDomain('.com')">.com</button>
+                </div>
+            </div>
+
+            <div id="fields-review">
+                <div class="input-group">
+                    <input type="url" id="current-url" name="Current_Website" class="input-field" placeholder=" " oninput="validatePhase1()">
+                    <label>Website URL (e.g., https://site.com)</label>
+                </div> 
+                <div class="input-group">
+                    <textarea id="changes-wanted" name="Changes_Wanted" class="input-field" placeholder=" " oninput="validatePhase1()"></textarea>
+                    <label>Changes Wanted / Goals</label>
+                </div>
+            </div>
+
+            <div id="fields-scratch" class="hidden">
+                <div class="input-group">
+                    <textarea id="project-details" name="Project_Details" class="input-field" placeholder=" " oninput="validatePhase1()"></textarea>
+                    <label>Project Details / Industry</label>
+                </div>
+                <p class="text">
+                    *Custom development pricing plans will be shown on the next step.
+                </p>
+            </div>
+
+            <div id="next-btn-container" style="display: flex; justify-content: center; margin-top: 10px;">
+                <button type="button" id="next-btn" class="btn-main" disabled onclick="expandForm()">
+                    Continue to Payment
+                </button>
+            </div>
+
+        </div> 
+    </div>
+    
+    <div id="step-2" class="hidden">
+        <div class="payment-tabs">
+            <div id="tab-paypal" class="pay-tab active" onclick="switchPaymentMethod('paypal')">PayPal (Global)</div>
+            <div id="tab-upi" class="pay-tab" onclick="switchPaymentMethod('upi')">UPI (India Only)</div>
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="discount-code" name="Discount_Code" class="input-field" placeholder=" " oninput="applyDiscount()">
+            <label>Discount Code (Optional)</label>
+        </div>
+
+        <div id="flow-paypal">
+            <div class="price-display">
+                <span class="final-price" id="final-price-pp">$0</span>
+            </div>
+            <div class="input-group">
+                <select id="package-paypal" name="Selected_Package_USD" class="input-field" onchange="applyDiscount(); validatePayPal();">
+                    <option value="" disabled selected>Select Package</option>
+                    <option value="45-html">HTML & CSS Speed Audit ($45)</option>
+                    <option value="25-wp">WordPress Speed Audit ($25)</option>
+                    <option value="100">P2P Developer Review ($100)</option>
+                </select>
+                <label>Select Package</label>
+            </div>
+            <div id="improve-message-pp" class="improvement-text"></div>
+            <button type="button" id="paypal-submit" class="btn-main paypal-yellow" disabled onclick="payWithPayPal()">Pay with PayPal</button>
+        </div>
+
+        <div id="flow-upi" class="hidden">
+            <div class="price-display">
+                <span class="final-price" id="final-price-upi">₹0</span>
+            </div>
+            <div class="input-group">
+                <select id="package-upi" name="Selected_Package_INR" class="input-field" onchange="applyDiscount(); validateUPI();">
+                    <option value="" disabled selected>Select Package</option>
+                    <option value="2000-html">HTML & CSS Speed Audit (₹2000)</option>
+                    <option value="2000-wp">WordPress Speed Audit (₹2000)</option>
+                    <option value="8000">P2P Developer Review (₹8000)</option>
+                </select>
+                <label>Select Package</label>
+            </div>
+            <div id="improve-message" class="improvement-text"></div>
+            
+            <div class="qr-container">
+                <div class="qr-frame">
+                    <img src="googlepay_qr.png" alt="UPI QR Code" id="display-qr">
+                </div>
+                <p class="qr-text" style="text-align: center; margin-bottom: 10px; font-weight: 600;">Scan to pay with any UPI App</p>
+                <div class="upi-copy-container" onclick="copyUPI()">
+                    <span id="upi-id">hkamili97@okhdfcbank</span>
+                    <span class="copy-hint">Copy ID</span>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <input type="number" id="ref-number" name="UPI_Ref" class="input-field" placeholder=" " oninput="validateUPI()">
+                <label>12-digit Transaction Ref Number</label>
+            </div>
+      
+            <div style="padding: 15px; background: rgba(95, 133, 219, 0.1); border-radius: 8px; margin-bottom: 20px;">
+                <p style="font-size: 0.85rem; color: var(--text);">
+                    <strong style="color: var(--primary);">Note:</strong> Please enter the 12-digit reference number from your bank app to enable the confirmation button.
+                </p>
+            </div>
+            
+            <button type="button" id="upi-submit" class="btn-main" disabled onclick="submitFinalForm()">Confirm Payment</button>
+        </div> 
+        
+        <button type="button" class="btn-cancel" onclick="cancelCheckout()">✖ Edit Project Details</button>
+</div>
+    </div>
+</form>
+</div>
+
+<section class="portfolio" id="portfolio-container">
+    <h1>Project Sample</h1>
+    <hr style="border: 2px solid #5F85bd; width: 20%; margin-left: 40%">
+	<hr style="border: 2px solid #ff3030; width: 20%; margin-top: 20px;   margin-left: 47%; margin-bottom: 20px;">
+    <div class="slider-track" id="slider-track">
+        <div class="pcard">
+            <img src="sample 1.jpeg" alt="Website 1">
+            <p>Sample 1</p>
+        </div>
+
+        <div class="pcard">
+            <img src="sample 2.jpeg" alt="Website 2">
+            <p>Sample 2</p>
+        </div>
+    </div>
+</section>
+
+</div>
+
+<footer>
+    <p>&copy; <span id="year"></span> Concept<span>toCode</span>. All rights reserved.</p>
+</footer>
+
+</body>
+</html> 

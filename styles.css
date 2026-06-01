@@ -1,0 +1,765 @@
+/* --- 1. CSS VARIABLES & RESET --- */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Inter', 'IBM Plex Sans Arabic', sans-serif; 
+}
+
+@font-face{
+  font-family: montserret;
+  src: url("https://fonts.shopifycdn.com/montserrat/montserrat_n4.1d581f6d4bf1a97f4cbc0b88b933bc136d38d178.woff2?h1=cmFjaGVscGFyY2VsbC5jb20&h2=dnNycGMuYWNjb3VudC5teXNob3BpZnkuY29t&hmac=7cc46c8ee6adbe5ee5f4787bd9cc1b1abf4cb460bddd7af35b91729c5c37bbf4") format("woff2"),
+       url("https://fonts.shopifycdn.com/montserrat/montserrat_n4.cfce41a967758ce5a9b7d48daeb5b028fd977a9b.woff?h1=cmFjaGVscGFyY2VsbC5jb20&h2=dnNycGMuYWNjb3VudC5teXNob3BpZnkuY29t&hmac=55c403500f19975b0da570d286a8a23b83d0d4bed9b4a87359d7c6716edd7743") format("woff");
+  src: url("https://www.cdnfonts.com/audrey.font");
+
+}
+:root {font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://fonts.shopifycdn.com/montserrat/montserrat_n4.1d581f6d4bf1a97f4cbc0b88b933bc136d38d178.woff2?h1=cmFjaGVscGFyY2VsbC5jb20&h2=dnNycGMuYWNjb3VudC5teXNob3BpZnkuY29t&hmac=7cc46c8ee6adbe5ee5f4787bd9cc1b1abf4cb460bddd7af35b91729c5c37bbf4") format("woff2"),
+       url("https://fonts.shopifycdn.com/montserrat/montserrat_n4.cfce41a967758ce5a9b7d48daeb5b028fd977a9b.woff?h1=cmFjaGVscGFyY2VsbC5jb20&h2=dnNycGMuYWNjb3VudC5teXNob3BpZnkuY29t&hmac=55c403500f19975b0da570d286a8a23b83d0d4bed9b4a87359d7c6716edd7743") format("woff");
+  src: url("https://www.cdnfonts.com/audrey.font");
+}
+
+::selection {
+    background: #90b8f8; /* Kept your primary selection color */
+    color: #0f172a;
+}
+
+:root {
+    --bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text: #334155;
+    --heading: #0f172a;
+    --primary: #5f85db;
+    --border: #e2e8f0;
+    --input-bg: #ffffff;
+}
+
+.dark-mode {
+    --bg: #1a1c1e;
+    --card-bg: #26282b;
+    --text: #cbd5e1;
+    --heading: #ffffff;
+    --primary: #90b8f8;
+    --border: #3f444d;
+    --input-bg: #1e2023; 
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* --- 2. NAVIGATION --- */
+nav { 
+    width: 100%; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 40px; 
+}
+
+.logo { 
+    font-weight: 800; 
+    font-size: 1.5rem; 
+    color: var(--heading); 
+}
+
+.logo span { 
+    color: var(--primary); 
+}
+
+.theme button { 
+    background: var(--card-bg); 
+    border: 1px solid var(--border); 
+    border-radius: 50%; 
+    width: 40px; 
+    height: 40px; 
+    cursor: pointer; 
+    font-size: 1.2rem; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    transition: all 0.2s ease;
+}
+
+.welcome-section {
+    max-width: 800px;
+    margin: 40px auto 20px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.welcome-section h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--heading);
+    margin-bottom: 10px;
+    margin-top: 30px;
+    line-height: 1.2;
+}
+
+.welcome-section h1 span {
+    color: var(--primary);
+}
+
+.welcome-section h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.welcome-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.ss {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.ss span h3 {
+    color: var(--primary);
+    padding: 3px;
+}
+.ss > .alter {
+    text-transform: capitalize
+    ;
+    padding: 5px;
+    animation: alter 6s infinite;
+}
+
+
+@keyframes alter { 
+    0%   { transform: translateY(-10px);}
+    16.67% { transform: translateY(-10px);/* Frame 1 */ }
+    33.33% { transform: translateY(-10px);/* Frame 2 */ }
+    50%    { transform: translateY(-37px);/* Frame 3 */ }
+    66.67% { transform: translateY(-37px);/* Frame 4 */ }
+    83.33% { transform: translateY(-70px);/* Frame 5 */ }
+    93.33% { transform: translateY(-70px);/* Frame 5 */ }
+    100%   { transform: translateY(-10px);/* Final state */ }
+}
+
+@media (max-width: 600px) {
+    .welcome-section h1 { font-size: 1.8rem; }
+    .welcome-section h2 { font-size: 1rem; }
+}
+
+.effect { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2000px;  /* Made huge to cover the expanding height of Step 2 */
+    height: 2000px; /* Made huge to cover the corners */
+    transform-origin: center; 
+    /* Adjust the gradient colors to your liking */
+    background: conic-gradient(from 0deg, transparent 70%, var(--primary) 100%);
+    z-index: -1;
+    animation: rotate 4s linear infinite;
+    pointer-events: none;
+    margin-top: -1000px; /* Half of height to center perfectly */
+    margin-left: -1000px; /* Half of width to center perfectly */
+    display: none;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* --- 3. BACKGROUND EFFECTS --- */
+.form-wrapper { 
+    position: relative; 
+    width: 100%; 
+    max-width: 500px; 
+    margin: 0 auto; 
+    padding: 3px; 
+    overflow: hidden; 
+}
+
+
+#step-1 {
+    background-color: var(--card-bg);
+}
+/*.effect { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 32px; 
+    height: 1000px; 
+    transform-origin: center; 
+    background: linear-gradient(rgba(95, 142, 225, 0.8) 32%, red 70%);
+    z-index: -1;
+    animation: rotate 5s linear infinite;
+    pointer-events: none;
+}
+
+/* Ensure Step 2 inputs look white/active when visible */
+#step-2 input, 
+#step-2 select {
+    background-color: var(--card-bg) !important;
+    border-color: var(--border) !important;
+}
+
+/* Optional: Add a subtle glow to show Step 2 is active */
+#step-2 {
+    border: 1px solid var(--primary);
+    box-shadow: 0 0 15px rgba(95, 133, 219, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+@keyframes rotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* --- 4. FORM CONTAINER --- */
+.form-container {
+    background-color: var(--card-bg); 
+    padding: 2px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    position: relative;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.form{
+    background-color: white;
+}
+
+.form-wrapper {
+    height: fit-content;
+}
+/* --- 5. PROJECT SELECTION CARDS --- */
+.project-type-selection { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px; 
+    margin-bottom: 25px; 
+}
+
+/* Styling for cards that are NOT selected */
+.type-card input:not(:checked) + .card-content {
+    background: var(--input-bg);
+    border-color: var(--border);
+    opacity: 0.3; /* Optional: makes inactive cards look 'faded' */
+    transform: scale(1);
+    box-shadow: none;
+}
+
+.type-card input[value="scratch"] + .card-content{
+    border: var(--primary) 2px solid;
+}
+
+.type-card input[value="review"] + .card-content{
+    border: var(--primary) 2px solid;
+
+}
+
+.type-card { cursor: pointer; }
+.type-card input { display: none; }
+
+.card-content { 
+    background: var(--input-bg);
+    padding: 20px 15px; 
+    margin: auto;
+    border: 2px solid var(--border); 
+    border-radius: 12px; 
+    text-align: center; 
+    transition: all 0.2s ease; 
+}
+
+.card-content .icon { font-size: 1.5rem; display: block; margin-bottom: 8px; }
+.card-content h3 { font-size: 0.95rem; color: var(--heading); margin-bottom: 4px; }
+.card-content p { font-size: 0.75rem; opacity: 0.8; line-height: 1.3; }
+
+/* --- 6. FLOATING LABELS & INPUTS --- */
+.input-group { 
+    position: relative; 
+    margin-bottom: 25px; 
+}
+
+.input-field { 
+    width: 100%; 
+    padding: 14px 15px; 
+    background: var(--input-bg); 
+    border: 1px solid var(--border); 
+    border-radius: 8px; 
+    color: var(--heading); 
+    outline: none; 
+    font-size: 1rem; 
+    transition: all 0.3s ease; 
+}
+
+.input-field:focus { 
+    border-color: var(--primary); 
+}
+
+/* Remove Number Input Spinners */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Base label state perfectly centered */
+.input-group label { 
+    position: absolute; 
+    left: 15px; 
+    top: 24px; 
+    transform: translateY(-50%); 
+    color: #94a3b8; 
+    pointer-events: none; 
+    transition: all 0.2s ease; 
+    background: var(--input-bg); 
+    padding: 0 5px; 
+    font-size: 1rem;
+}
+
+/* Floating label active state */
+.input-field:focus + label, 
+.input-field:not(:placeholder-shown) + label { 
+    top: 0 !important; 
+    font-size: 0.75rem; 
+    color: var(--primary); 
+    font-weight: 700; 
+    transform: translateY(-50%);
+}
+
+/* Textarea specifics */
+textarea.input-field { 
+    min-height: 140px; 
+    padding-top: 18px; 
+    resize: none; 
+}
+
+textarea.input-field + label {
+    top: 25px; 
+}
+
+textarea.input-field:focus + label, 
+textarea.input-field:not(:placeholder-shown) + label {
+    top: 0 !important;
+}
+
+/* Quick Email Buttons */
+.email-btn-container {
+    display: none;
+    gap: 8px;
+    margin-top: 8px; 
+}
+
+.quick-email-btn {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.quick-email-btn:hover {
+    background: rgba(144, 184, 248, 0.1);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+/* --- 7. BUTTONS --- */
+.btn-main { 
+    width: 100%; 
+    padding: 15px; 
+    background: var(--primary); 
+    color: #fff; 
+    border: none; 
+    border-radius: 8px; 
+    font-weight: 700; 
+    cursor: pointer; 
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.btn-main:hover { opacity: 0.9; transform: translateY(-1px); }
+
+.btn-cancel { 
+    background: none; 
+    border: none; 
+    color: var(--text); 
+    width: 100%; 
+    margin-top: 15px; 
+    cursor: pointer; 
+    font-size: 0.9rem; 
+    opacity: 0.7;
+    display: none !important;
+}
+
+.hidden { display: none !important; }
+
+.disabled-btn {
+    opacity: 0.5;
+    cursor: not-allowed;
+    filter: grayscale(1);
+}
+
+/* --- 8. PAYMENT & PREVIEW SECTION --- */
+#payment-section {
+    animation: expandFade 0.4s ease-out forwards;
+    border-top: 1px solid var(--border);
+    margin-top: 25px;
+    padding-top: 25px;
+}
+
+@keyframes expandFade {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.price-display {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #94a3b8;
+    font-size: 1.1rem;
+    margin-bottom: -5px;
+    display: block;
+}
+
+.final-price {
+    margin-top: 20px;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    display: block;
+}
+
+.discount-status {
+    font-size: 0.8rem;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    height: 12px;
+    font-weight: 600;
+}
+
+#discount-msg {
+    font-size: 0.85rem;
+    min-height: 1.2rem;
+}
+/* --- Dynamic Selection Message --- */
+.selection-message {
+    background: rgba(95, 133, 219, 0.08); 
+    border-left: 4px solid var(--primary);
+    padding: 16px 20px;
+    margin-bottom: 25px;
+    border-radius: 0 8px 8px 0;
+    animation: fadeIn 0.3s ease-out; 
+}
+
+.selection-message h4 {
+    color: var(--primary);
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.selection-message p {
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.selection-message .selection-cta {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--heading);
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.payment-tabs { 
+    display: flex; 
+    gap: 10px; 
+    margin: 25px 0; 
+}
+
+.pay-tab { 
+    flex: 1; 
+    text-align: center; 
+    padding: 12px; 
+    border: 1px solid var(--border); 
+    border-radius: 8px; 
+    cursor: pointer; 
+    font-weight: 600; 
+    background: var(--input-bg);
+    transition: 0.3s;
+}
+
+.pay-tab.active { 
+    border-color: var(--primary); 
+    color: var(--primary); 
+    background: rgba(144, 184, 248, 0.1); 
+}
+
+.qr-frame {
+    background-color: var(--card-bg); 
+    display: flex;
+    margin: 10px auto; 
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.qr-frame img {
+    height: 240px; 
+    margin: 10px auto;
+}
+
+/* Consolidated UPI Copy Box */
+.upi-copy-container {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--input-bg); 
+    padding: 14px 15px;
+    border: 1px dashed var(--primary); 
+    border-radius: 8px;
+    margin: 15px auto;
+    transition: all 0.2s ease;
+}
+
+.upi-copy-container:hover {
+    background: rgba(144, 184, 248, 0.05);
+    border-style: solid;
+}
+
+.upi-copy-container:active {
+    transform: scale(0.98);
+}
+
+#upi-id {
+    display: flex;
+    justify-content: center;
+    font-family: 'Inter', monospace;
+    font-weight: 600;
+    color: var(--heading);
+    font-size: 0.9rem;
+}
+
+.copy-hint {
+    font-size: 0.7rem;
+    background: var(--primary);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+.improvement-text {
+    display: none;
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+    color: var(--primary);
+    text-align: center;
+    background: rgba(144, 184, 248, 0.1);
+    padding: 30px;
+    border-left: 5px solid var(--primary);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    line-height: 1.4;
+}
+
+/* Cleaned up PayPal button */
+.paypal-yellow {
+    background: #ffc439 !important;
+    color: #003087 !important;
+    border: none !important;
+    font-weight: 800 !important;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.paypal-yellow:hover {
+    background: #f2ba36 !important;
+}
+
+/* Grayish / Disabled state for Step 1 */
+.step-disabled {
+    filter: grayscale(100%);
+    opacity: 0.6;
+    pointer-events: none; /* Disables all clicks and typing */
+    user-select: none;
+    cursor: not-allowed;
+    transition: all 0.4s ease;
+}
+
+.step-disabled input, 
+.step-disabled select, 
+.step-disabled textarea {
+    background-color: var(--bg) !important;
+    border-color: var(--border) !important;
+}
+
+/* The main window the user looks through */
+.portfolio {
+    width: 100%;
+    overflow: hidden; /* Hides the cards that spill off the screen */
+    position: relative;
+    padding: 60px 0; 
+}
+
+
+.portfolio h1{
+    margin: 20px auto;
+    text-align: center;
+    color: var(--text);
+}
+/* The long track that actually moves side to side */
+.slider-track {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Space between cards */
+    width: max-content; /* Allows track to be as wide as all cards combined */
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* Smoother sliding animation */
+}
+
+/* Individual Cards */
+.pcard {
+    position: relative;
+    width: 460px; /* Fixed width */
+    flex-shrink: 0; /* Prevents flexbox from squishing the cards */
+    opacity: 0.3; 
+    transform: scale(0.85); 
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    text-align: center;
+}
+
+/* The Highlighted Center Card */
+.pcard.active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2;
+}
+
+.pcard img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Adds depth to match a premium look */
+}
+
+.pcard p {
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 50px;
+    border-top: 1px solid var(--border);
+    color: var(--text);
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+footer span {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Essential Visibility & State Rules */
+.hidden {
+    display: none !important;
+}
+
+/* Fix for disabled buttons */
+.btn-main:disabled {
+    background: gray !important;
+    color: #d1d5db !important; /* light gray text */
+    cursor: not-allowed;
+    filter: none; /* Removing grayscale so the gray background pops cleanly */
+    opacity: 0.8;
+}
+
+
+.text {
+    margin: 15px 0;
+    font-size: 0.85rem;
+    color: var(--primary);
+    text-align: center;
+    background: rgba(144, 184, 248, 0.1);
+    padding: 15px;
+    border-left: 5px solid var(--primary);
+    border-radius: 8px;
+    line-height: 1.4;
+}
+.improvement-text {
+    display: none; /* Hidden by default, shown via JS */
+    margin: 15px 0;
+    font-size: 0.85rem;
+    color: var(--primary);
+    text-align: center;
+    background: rgba(144, 184, 248, 0.1);
+    padding: 15px;
+    border-left: 5px solid var(--primary);
+    border-radius: 8px;
+    line-height: 1.4;
+}
+
+/* Add/Replace this in your styles.css */
+.btn-cancel { 
+    background: rgba(218, 48, 48, 0.78); 
+    border: 2px solid red;
+    color: var(--text); 
+    width: 100%; 
+    margin-top: 15px; 
+    cursor: pointer; 
+    font-size: 0.9rem; 
+    opacity: 0.7;
+    padding: 10px;
+    transition: opacity 0.2s;
+    display: block !important; /* Ensures it overrides the 'none' rule */
+}
+
+.btn-cancel:hover {
+    opacity: 1;
+    text-decoration: underline;
+}

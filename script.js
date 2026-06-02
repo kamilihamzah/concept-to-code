@@ -47,7 +47,7 @@ function togglePhase1Fields() {
         if (detailsInput) detailsInput.disabled = true; 
         
         if(msgHeader) msgHeader.innerText = "Ready for a Performance Audit?";
-        if(msgBody) msgBody.innerText = "We will analyze your current site structure, identify bottlenecks, and provide a clear plan for optimization.";
+        if(msgBody) msgBody.innerText = "I will analyze your current site structure, identify bottlenecks, and provide a clear plan for optimization.";
         if(msgCta) msgCta.innerText = "Next Step: Provide your current site details below.";
         
     } else {

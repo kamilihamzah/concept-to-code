@@ -108,13 +108,19 @@ nav {
 .welcome-section h1 span {
     color: var(--primary);
 }
-
+/*
 .welcome-section h2 {
     font-size: 1.2rem;
     font-weight: 400;
     color: var(--text);
     margin-bottom: 20px;
     opacity: 0.9;
+}*/
+
+.welcome-section .at {
+    font-weight: 900;
+    font-size: 40px;
+    color: var(--text);
 }
 
 .welcome-section p {

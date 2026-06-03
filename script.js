@@ -257,7 +257,7 @@ function updateImprovement() {
         msgBox.innerHTML = "✨ <strong>Expected Result:</strong> 100% Performance Improvement Guaranteed. In Sha Allah!";
         msgBox.style.display = "block";
     } else if (selectedText.includes("WordPress")) {
-        msgBox.innerHTML = "🚀 <strong>Expected Result:</strong> 40-60% Performance Improvement. In Sha Allah!";
+        msgBox.innerHTML = "🚀 <strong>Expected Result:</strong> 30-50% Design Improvement. In Sha Allah!";
         msgBox.style.display = "block";
     } else {
         msgBox.style.display = "none"; 

@@ -215,7 +215,7 @@ function expandForm() {
             <option value="" disabled selected>Select UPI INR Package</option>
             <option value="3800-html">HTML & CSS Speed Audit </option>
             <option value="2000-wp">WordPress Speed Audit </option>
-            <option value="8000-p2p">P2P Developer Review </option>
+           // <option value="8000-p2p">P2P Developer Review </option>
         `;
         window.scrollTo({ top: 350, behavior: 'smooth' });
     } else {

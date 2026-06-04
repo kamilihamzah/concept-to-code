@@ -110,9 +110,9 @@ nav {
 }
 
 .welcome-section .abt {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 400;
-background-color: red;
+background-color: blue;
     color: var(--text);
     margin-bottom: 20px;
     opacity: 0.9;

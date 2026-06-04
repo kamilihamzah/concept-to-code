@@ -109,9 +109,10 @@ nav {
     color: var(--primary);
 }
 
-.welcome-section h2 {
+.welcome-section .abt {
     font-size: 32px;
     font-weight: 400;
+background-color: red;
     color: var(--text);
     margin-bottom: 20px;
     opacity: 0.9;

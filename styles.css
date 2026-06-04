@@ -118,9 +118,9 @@ nav {
 }
 
 @Media (max-width: 600px) {
-.welcome-section .abt { font-size: 35px}
+.welcome-section .abt { font-size: 30px}
 
-
+}
 .welcome-section p {
     font-size: 1rem;
     line-height: 1.6;

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 1. UPDATE THESE FOR EVERY NEW POST -->
+    <title>Understanding Web Performance | Concept to Code</title>
+    <meta name="description" content="A quick guide on how optimizing flexbox containers improves mobile website speed.">
+    
+    <!-- 2. UPDATE THE URL TO MATCH THIS EXACT PAGE's NAME -->
+    <link rel="canonical" href="https://concept-to-code.onrender.com/my-new-post.html">
+    
+    <!-- 3. SOCIAL MEDIA PREVIEW TAGS (Update these to match the post) -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://concept-to-code.onrender.com/my-new-post.html">
+    <meta property="og:title" content="Understanding Web Performance | Concept to Code">
+    <meta property="og:description" content="A quick guide on how optimizing flexbox containers improves mobile website speed.">
+    <meta property="og:image" content="https://concept-to-code.onrender.com/tech-setup.jpg">
+    
+    <!-- THESE STAY EXACTLY THE SAME AS YOUR HOME PAGE -->
+    <link rel="icon" type="image/png" href="tab-icon.png">
+    <link rel="apple-touch-icon" href="tab-icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- KEEP YOUR NAVIGATION SO USERS CAN GO BACK HOME -->
+<nav>
+    <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">Concept<span>toCode</span></a></div>
+    <div class="nav-right">
+        <div class="theme" id="theme-track-container">
+            <button id="theme-icon-btn">☀️</button>
+        </div>
+    </div>
+</nav>
+
+<!-- THE HEADER FOR YOUR BLOG POST -->
+<header class="welcome-section" style="margin-top: 20px; margin-bottom: 40px;">
+    <h2 style="font-size: 0.9rem; color: var(--primary); text-transform: uppercase; letter-spacing: 1px;">Tech Blog</h2>
+    <h1 style="margin-top: 10px;">Understanding Web Performance</h1>
+    <p style="font-size: 0.9rem; color: #94a3b8;">Published on November 16, 2026</p>
+</header>
+
+<!-- YOUR ACTUAL BLOG CONTENT GOES HERE -->
+<section class="about" style="max-width: 700px; margin: 0 auto; padding: 0 20px;">
+    
+    <img src="tech-setup.jpg" alt="My tech setup" style="max-width: 100%; border-radius: 8px; margin-bottom: 25px;">
+    
+    <p style="line-height: 1.8; margin-bottom: 20px;">
+        Today I was testing some new CSS layouts. I found that optimizing your flexbox containers can make a massive difference on mobile screens. 
+    </p>
+
+    <h3 style="color: var(--heading); margin-top: 30px; margin-bottom: 15px;">Why Mobile Optimization Matters</h3>
+    <p style="line-height: 1.8; margin-bottom: 20px;">
+        When elements wrap incorrectly, it pushes content off the screen and ruins the user experience. By forcing text wrapping rules, you keep the design intact.
+    </p>
+
+    <a href="index.html" class="btn-main" style="display: inline-block; text-align: center; text-decoration: none; margin-top: 30px; width: auto; padding: 10px 25px;">← Back to Home</a>
+
+</section>
+
+<!-- KEEP YOUR FOOTER -->
+<footer>
+    <p>&copy; <span id="year"></span> Concept<span>toCode</span>. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

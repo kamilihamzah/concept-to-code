@@ -88,3 +88,57 @@
     font-size: 0.95rem;
     margin-bottom: 0;
 }
+
+/* --- 1. DARK MODE VARIABLES --- */
+/* Add or update this in your main styles.css */
+.dark-mode {
+    --bg: #121212; /* Deep background */
+    --card-bg: #1e1e1e;
+    --text: #ffffff; /* Crisp white text */
+    --heading: #ffffff; /* Crisp white headings */
+    --primary: #f97316; /* Bright orange */
+    --border: #2a2a2a;
+    --input-bg: #121212;
+    --highlight: #f97316; /* Orange highlights */
+}
+
+/* --- 2. IMPORTANT CARD DROP SHADOWS --- */
+.important-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 35px 0;
+    border-left: 4px solid var(--highlight);
+    /* Standard subtle shadow for light mode */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark-mode .important-card {
+    /* Soft orange ambient glow for dark mode */
+    box-shadow: 0 8px 25px rgba(249, 115, 22, 0.12), 
+                0 2px 10px rgba(249, 115, 22, 0.08);
+}
+
+.important-card:hover {
+    transform: translateY(-3px);
+    /* Stronger orange glow on hover */
+    box-shadow: 0 12px 30px rgba(249, 115, 22, 0.25);
+}
+
+.important-card h4 {
+    color: var(--highlight);
+    margin-bottom: 12px;
+}
+
+/* --- 3. SCROLL ANIMATION CLASSES --- */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(25px); /* Starts slightly pushed down */
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0); /* Slides up into place */
+}

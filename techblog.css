@@ -22,7 +22,7 @@
     --highlight: #fbbf24; /* Warm yellow accent */
 }
 
-.temp {background-color: red}
+.temp {display: none}
 /* --- BLOG HEADER --- */
 .blog-header {
     margin: 20px auto 40px;

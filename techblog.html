@@ -42,6 +42,58 @@
         </div>
     </div>
 </nav>
+<script>
+// --- SCROLL ANIMATION OBSERVER ---
+document.addEventListener("DOMContentLoaded", () => {
+    const observerOptions = {
+        threshold: 0.15, // Triggers when 15% of the element is on screen
+        rootMargin: "0px 0px -40px 0px" // Triggers just before it hits the bottom edge
+    };
+
+    const scrollObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                // Optional: Stop observing once animated so it doesn't repeat on scroll up
+                observer.unobserve(entry.target); 
+            }
+        });
+    }, observerOptions);
+
+    // Find everything with the animation class and watch it
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    animatedElements.forEach(el => scrollObserver.observe(el));
+});
+</script>
+
+<section class="blog-content">
+    
+    <!-- No animation, loads immediately -->
+    <p>
+        As we approach the end of the year, the smartphone market is experiencing its most dramatic hardware shift in a decade. If you have been keeping up with deep-dives on digital platforms like GSMArena and TechRepublic, you already know the buzz: iterative camera tweaks are out, and foundational tech changes are in.
+    </p>
+
+    <h3>The Rise of Agentic AI</h3>
+    <!-- Animates when scrolled to -->
+    <p class="animate-on-scroll">
+        Until now, AI on smartphones has mostly been cloud-reliant chatbots. Late 2026 flagships are officially moving toward "on-device agentic AI". These are smart agents running entirely on the phone's local silicon that can perform autonomous, cross-app actions.
+    </p>
+
+    <h3>Silicon-Carbon Battery Breakthroughs</h3>
+    <!-- Animates when scrolled to -->
+    <p class="animate-on-scroll">
+        Perhaps the most exciting physical hardware upgrade is the mainstream adoption of silicon-carbon battery technology. This new chemistry is allowing manufacturers to cram massive 8,000mAh battery capacities into standard, ultra-slim form factors. 
+    </p>
+
+    <!-- Combined drop shadow card and scroll animation -->
+    <div class="important-card animate-on-scroll">
+        <h4>The Takeaway</h4>
+        <p style="margin-bottom: 0;">
+            The late 2026 upgrade cycle is actually worth the hype. If you have been holding onto an older device waiting for a tangible leap in battery chemistry and local processing power, the incoming wave of flagships is exactly what you have been waiting for.
+        </p>
+    </div>
+
+</section>
 
 <!-- POST 1: THE 2026 SHIFT -->
 <header class="welcome-section temp">

@@ -1,3 +1,27 @@
+/* LIGHT MODE */
+:root {
+    --bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text: #475569;
+    --heading: #0f172a;
+    --primary: #0284c7; /* Deep tech blue */
+    --border: #e2e8f0;
+    --input-bg: #ffffff;
+    --highlight: #ea580c; /* Burnt orange accent */
+}
+
+/* DARK MODE */
+.dark-mode {
+    --bg: #0f172a; /* Deep slate */
+    --card-bg: #1e293b;
+    --text: #94a3b8;
+    --heading: #f8fafc;
+    --primary: #38bdf8; /* Electric cyan */
+    --border: #334155;
+    --input-bg: #0f172a;
+    --highlight: #fbbf24; /* Warm yellow accent */
+}
+
 /* --- BLOG HEADER --- */
 .blog-header {
     margin: 20px auto 40px;

@@ -46,29 +46,39 @@
 <script>
 
 
-// --- SCROLL-ONLY ANIMATION OBSERVER ---
+// // --- SCROLL-ONLY ANIMATION OBSERVER ---
 document.addEventListener("DOMContentLoaded", () => {
-    const startScrollAnimations = () => {
-        const observerOptions = {
-            threshold: 0.15,
-            rootMargin: "0px 0px -40px 0px"
-        };
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
 
-        const scrollObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("is-visible");
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
+    // 1. Instantly show anything already on screen (no blank space, no load animation)
+    animatedElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+            el.style.transition = "none";
+            el.classList.add("is-visible");
+        }
+    });
 
-        const animatedElements = document.querySelectorAll('.animate-on-scroll');
-        animatedElements.forEach(el => scrollObserver.observe(el));
+    // 2. Slide in everything below the screen as the user scrolls
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: "0px 0px -40px 0px"
     };
 
-    // Wait until the user actually scrolls before triggering any animations
-    window.addEventListener("scroll", startScrollAnimations, { once: true });
+    const scrollObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    animatedElements.forEach(el => {
+        if (!el.classList.contains("is-visible")) {
+            scrollObserver.observe(el);
+        }
+    });
 });
 
 </script>

@@ -131,14 +131,23 @@
     margin-bottom: 12px;
 }
 
-/* --- 3. SCROLL ANIMATION CLASSES --- */
+.blog-content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
+    color: var(--text);
+    overflow-x: hidden; /* Prevents horizontal scrollbars on mobile */
+}
+
+/* --- RIGHT-TO-LEFT SCROLL ANIMATION --- */
 .animate-on-scroll {
     opacity: 0;
-    transform: translateY(25px); /* Starts slightly pushed down */
+    transform: translateX(50px); /* Starts 50px to the right */
     transition: opacity 0.7s ease-out, transform 0.7s ease-out;
 }
 
 .animate-on-scroll.is-visible {
     opacity: 1;
-    transform: translateY(0); /* Slides up into place */
+    transform: translateX(0); /* Slides left into place */
 }
+

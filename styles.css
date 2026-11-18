@@ -45,7 +45,7 @@
     --border: #3f444d;
     --input-bg: #1e2023; 
 }
-
+.temp {display: none}
 body {
     background-color: var(--bg);
     color: var(--text);

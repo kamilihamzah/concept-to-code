@@ -126,6 +126,51 @@
     box-shadow: 0 12px 30px rgba(249, 115, 22, 0.25);
 }
 
+/* --- LONG-FORM ARTICLE & SEO ELEMENTS --- */
+.blog-content h2 {
+    color: var(--heading);
+    font-size: 1.5rem;
+    margin-top: 45px;
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+}
+
+.toc-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.toc-list li {
+    margin-bottom: 10px;
+}
+
+.toc-list a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.toc-list a:hover {
+    color: var(--highlight);
+}
+
+.blog-list {
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.blog-list li {
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.faq-item {
+    margin-bottom: 25px;
+}
+
+
 .important-card h4 {
     color: var(--highlight);
     margin-bottom: 12px;

@@ -196,3 +196,30 @@
     transform: translateX(0); /* Slides left into place */
 }
 
+/* --- COLLAPSIBLE OLD POSTS --- */
+.extra-content {
+    display: none;
+}
+
+.old-post.is-expanded .extra-content {
+    display: block;
+}
+
+.read-more-btn {
+    background: transparent;
+    color: var(--highlight);
+    border: 2px solid var(--highlight);
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.read-more-btn:hover {
+    background: var(--highlight);
+    color: #ffffff;
+}

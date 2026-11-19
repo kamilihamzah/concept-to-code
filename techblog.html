@@ -81,6 +81,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// --- CONTINUE TO READ TOGGLE ---
+document.addEventListener("DOMContentLoaded", () => {
+    const readMoreButtons = document.querySelectorAll(".read-more-btn");
+
+    readMoreButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const post = btn.closest(".old-post");
+            const isExpanded = post.classList.toggle("is-expanded");
+            btn.textContent = isExpanded ? "Show less" : "Continue to read";
+        });
+    });
+});
+
 </script>
 
 <article>

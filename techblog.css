@@ -206,7 +206,7 @@ background-color: orange;
 .old-post.is-expanded .extra-content {
     display: block;
 }
-
+.gree {background-color: green;}
 .read-more-btn {
     background: var(--highlight);
     color: #ffffff;

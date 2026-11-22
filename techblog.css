@@ -197,6 +197,25 @@
 }
 
 .read-more-btn {
+    background: var(--highlight);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    margin-bottom: 30px;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.read-more-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+/*
+.read-more-btn {
     background: transparent;
     color: var(--highlight);
     border: 2px solid var(--highlight);
@@ -213,7 +232,7 @@
 .read-more-btn:hover {
     background: var(--highlight);
     color: #ffffff;
-}
+}*/
 
 /* --- RIGHT-TO-LEFT SCROLL ANIMATION --- */
 .animate-on-scroll {

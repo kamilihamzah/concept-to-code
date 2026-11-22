@@ -59,6 +59,7 @@
     padding: 0 20px;
     color: var(--text);
     overflow-x: hidden;
+background-color: blue; 
 }
 
 .blog-content p {

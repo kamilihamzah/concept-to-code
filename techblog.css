@@ -190,7 +190,14 @@ background-color: teal;
     overflow-x: hidden; /* Prevents horizontal scrollbars on mobile */
 }
 
-
+.old-post {
+max-width: 700px;
+    margin: 10px auto;
+    padding: 0 20px;
+background-color: orange;
+    color: var(--text);
+    overflow-x: hidden; /* Prevents horizontal scrollbars on mobile */
+}
 /* --- COLLAPSIBLE OLD POSTS --- */
 .extra-content {
     display: none;

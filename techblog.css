@@ -182,8 +182,9 @@
 
 .blog-content {
     max-width: 700px;
-    margin: 0 auto;
+    margin: 10px auto;
     padding: 0 20px;
+background-color: teal;
     color: var(--text);
     overflow-x: hidden; /* Prevents horizontal scrollbars on mobile */
 }

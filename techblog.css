@@ -151,7 +151,7 @@ background-color: blue;
     border-bottom: 2px solid var(--border);
 }
 
-.toc-box {padding : 10px 
+.toc-box {padding : 10px;}
 .toc-list {
     list-style: none;
     padding-left: 0;

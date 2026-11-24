@@ -34,6 +34,7 @@ html, body {
 
 .temp {display: none;}
 .red {background-color: red;}
+.yel {background-color: yellow;}
 .gr{background-color: gray;}
 /* --- BLOG HEADER --- */
 .blog-header {
@@ -116,8 +117,6 @@ background-color: blue;
     --input-bg: #121212;
     --highlight: #f97316; /* Orange highlights */
 }
-
-.yel{ background-color: yellow;}
 
 /* --- 2. IMPORTANT CARD DROP SHADOWS --- */
 .important-card {

@@ -196,7 +196,6 @@ background-color: blue;
     max-width: 700px;
     margin: 10px auto;
     padding: 0 20px;
-background-color: teal;
     color: var(--text);
     overflow-x: hidden; /* Prevents horizontal scrollbars on mobile */
 }
@@ -205,7 +204,7 @@ background-color: teal;
 max-width: 700px;
     margin: 10px auto;
     padding: 0 20px;
-background-color: orange;
+
     color: var(--text);
     overflow-x: hidden; /* Prevents horizontal scrollbars on mobile */
 }
@@ -215,7 +214,7 @@ background-color: orange;
 }
 
 .old-post.is-expanded .extra-content {
-    display: block;
+    display: block; padding: 20px;
 }
 .gree {background-color: green;}
 .read-more-btn {

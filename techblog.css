@@ -37,6 +37,8 @@ html, body {
 .yel {background-color: yellow;}
 .gr{background-color: gray;}
 /* --- BLOG HEADER --- */
+
+nav {padding: 10px 20px;}
 .blog-header {
     margin: 20px auto 40px;
     max-width: 800px;

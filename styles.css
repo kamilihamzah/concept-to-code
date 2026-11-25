@@ -770,10 +770,10 @@ footer span {
 }
 
 .blog-button {
-    display: inline-block;
+    display: flex;
     background-color: #2563EB; /* Royal blue */
     color: #ffffff;
-    margin: 12px auto;
+    margin-top: 12px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;

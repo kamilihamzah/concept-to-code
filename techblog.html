@@ -23,9 +23,8 @@
     <link rel="apple-touch-icon" href="tab-icon.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="techblog.css">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="techblog.css">
 
     <script src="script.js" defer></script>
 </head>
@@ -44,9 +43,7 @@
 </nav>
 
 <script>
-
-
-// // --- SCROLL-ONLY ANIMATION OBSERVER ---
+// --- SCROLL-ONLY ANIMATION OBSERVER ---
 document.addEventListener("DOMContentLoaded", () => {
     const animatedElements = document.querySelectorAll('.animate-on-scroll');
 
@@ -88,14 +85,15 @@ document.addEventListener("DOMContentLoaded", () => {
     readMoreButtons.forEach(btn => {
         btn.addEventListener("click", () => {
             const post = btn.closest(".old-post");
+            if (!post) return;
             const isExpanded = post.classList.toggle("is-expanded");
             btn.textContent = isExpanded ? "Show less" : "Continue to read";
         });
     });
 });
-
 </script>
 
+<!-- TOP POST (NEWEST - FULLY EXPANDED) -->
 <article>
     <header class="blog-header">
         <h2 class="blog-category">Buyer's Guide</h2>
@@ -111,9 +109,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <p>
             This guide cuts through the marketing noise. Whether you are shopping for a no-compromise flagship, a multi-day battery champion, or a reliable mid-range daily driver, here is exactly what to look for before spending your money—and how to match the right hardware to your budget.
         </p>
-</article>
 
-        <!-- TABLE OF CONTENTS (Great for SEO jump links and mobile UX) -->
+        <!-- TABLE OF CONTENTS -->
         <nav class="important-card toc-box" aria-label="Table of Contents">
             <h4>Quick Navigation</h4>
             <ul class="toc-list">
@@ -125,41 +122,24 @@ document.addEventListener("DOMContentLoaded", () => {
         </nav>
 
         <!-- SECTION 1 -->
+        <h2 id="specs-that-matter">1. The 5 Specs That Actually Matter in 2026</h2>
 
-     
-        <h2 id="specs-that-matter" style="padding: 10px 20px;">1. The 5 Specs That Actually Matter in 2026</h2>
-<div class="old-post gree">
         <h3>Processors and On-Device AI (NPU Performance)</h3>
-        <p>Raw CPU speed stopped being the main bottleneck for everyday smartphone use years ago.
-    </p>
-<div class="extra-content">
-          <p>Even mid-range chips easily handle social media, messaging, and video streaming. In 2026, the real separator is the Neural Processing Unit (NPU) and thermal efficiency.
+        <p class="animate-on-scroll">
+            Raw CPU speed stopped being the main bottleneck for everyday smartphone use years ago. Even mid-range chips easily handle social media, messaging, and video streaming. In 2026, the real separator is the Neural Processing Unit (NPU) and thermal efficiency.
         </p>
-            <p>
+        <p class="animate-on-scroll">
             Modern smartphones increasingly run agentic AI features locally—such as live call translation, on-device photo editing, and cross-app task automation—without sending data to cloud servers. A newer chipset with a dedicated NPU and efficient fabrication process will stay cool under load, preserve battery life, and remain fast three to four years from now.
         </p>
-</div>
-
-    <button class="read-more-btn" type="button">Continue to read</button>
-</div>
-</div> </div>
-<div class="old-post yel">
 
         <h3>Silicon-Carbon Batteries and Charging Speeds</h3>
         <p class="animate-on-scroll">
-            Battery chemistry has finally caught up with power-hungry displays and 5G modems. Traditional lithium-ion cells are rapidly being replaced by silicon-carbon batteries, 
-<div class="extra-content">
-which pack significantly higher energy density into the exact same physical footprint.
+            Battery chemistry has finally caught up with power-hungry displays and 5G modems. Traditional lithium-ion cells are rapidly being replaced by silicon-carbon batteries, which pack significantly higher energy density into the exact same physical footprint.
         </p>
         <p class="animate-on-scroll">
             In practical terms, 5,000mAh is no longer the ceiling. Many slim phones now ship with 6,000mAh to 8,000mAh capacities, turning two-day battery life into a realistic expectation. When comparing phones, prioritize battery capacity and processor efficiency over extreme wattage numbers—a 6,500mAh battery with 45W charging is almost always better in daily life than a 4,500mAh battery with 120W charging.
         </p>
-</div>
-    <button class="read-more-btn" type="button">Continue to read</button>
-</div>
-</div></div>
 
-<div class="old-post red">
         <h3>Camera Sensors vs. Megapixel Counts</h3>
         <p class="animate-on-scroll">
             A 200MP badge on a spec sheet does not guarantee better photos than a well-tuned 50MP camera. Image quality depends far more on physical sensor size, optical image stabilization (OIS), lens aperture, and the manufacturer's image processing pipeline.
@@ -167,12 +147,7 @@ which pack significantly higher energy density into the exact same physical foot
         <p class="animate-on-scroll">
             Look for three practical camera indicators: a large main sensor with OIS, a genuinely useful telephoto lens (at least 2x or 3x optical zoom) rather than filler 2MP macro sensors, and consistent color science across all lenses. If you shoot a lot of video, check for 4K 60fps stabilization and reliable autofocus in low light.
         </p>
-</div>
-<button class="read-more-btn" type="button">Continue to read</button>
-</div>
-</div>
 
-<div class="old post">
         <h3>Display Quality: LTPO OLED and Real-World Brightness</h3>
         <p class="animate-on-scroll">
             A 120Hz refresh rate is now standard across almost every price tier, but not all 120Hz screens are equal. Flagship and upper-mid-range phones use LTPO OLED panels that dynamically drop from 120Hz down to 1Hz when reading static text, saving a noticeable amount of battery.
@@ -180,36 +155,12 @@ which pack significantly higher energy density into the exact same physical foot
         <p class="animate-on-scroll">
             Ignore peak HDR brightness claims like "4,500 nits"—that number only applies to a tiny percentage of pixels during HDR video playback. Instead, look for high sustained outdoor brightness (at least 1,200 to 1,600 nits in High Brightness Mode) so the screen stays readable under direct sunlight.
         </p>
-<button class="read-more-btn" type="button">Continue to read</button>
-</div>
-</div>
-
-<div class="old post">
-        <h3>Processors and On-Device AI (NPU Performance)</h3>
-        <p>Raw CPU speed stopped being the main bottleneck for everyday smartphone use years ago.
-    </p>
-<div class="extra-content">
-          <p>Even mid-range chips easily handle social media, messaging, and video streaming. In 2026, the real separator is the Neural Processing Unit (NPU) and thermal efficiency.
-        </p>
-       
-            <p> Modern smartphones increasingly run agentic AI features locally—such as live call translation, on-device photo editing, and cross-app task automation—without sending data to cloud servers. A newer chipset with a dedicated NPU and efficient fabrication process will stay cool under load, preserve battery life, and remain fast three to four years from now.
-        </p>
-</div>
-
-    <button class="read-more-btn" type="button">Continue to read</button>
-</div>
-
-
 
         <h3>Software Updates and Long-Term Support</h3>
         <p class="animate-on-scroll">
-            Hardware ages slowly, but unsupported software ages fast. Leading brands now promise five to seven years of OS and security updates on their flagship models, and</p>
-
-<p>three to four years on mid-range devices. Checking a phone's official update policy before buying protects both your security and your resale value.
+            Hardware ages slowly, but unsupported software ages fast. Leading brands now promise five to seven years of OS and security updates on their flagship models, and three to four years on mid-range devices. Checking a phone's official update policy before buying protects both your security and your resale value.
         </p>
-<button class="read-more-btn" type="button">Continue to read</button>
-</div>
-</div>
+
         <!-- SECTION 2 -->
         <h2 id="category-picks">2. Best Smartphone Categories Explained</h2>
         <p class="animate-on-scroll">
@@ -225,7 +176,7 @@ which pack significantly higher energy density into the exact same physical foot
                 <strong>What to look for:</strong> Latest flagship chipset, LTPO 120Hz OLED display, IP68 water resistance, 5+ years of OS updates, and a versatile triple-camera system.
             </p>
             <p>
-                <strong>Top Pick Slot:</strong> [Insert your chosen flagship model &amp; current price]
+                <strong>Top Pick Slot:</strong> [Insert your chosen flagship model & current price]
             </p>
         </div>
 
@@ -238,7 +189,7 @@ which pack significantly higher energy density into the exact same physical foot
                 <strong>What to look for:</strong> 1-inch or large flagship main sensor, periscope telephoto lens (3x to 5x optical zoom), OIS across primary lenses, and strong RAW/Pro video controls.
             </p>
             <p>
-                <strong>Top Pick Slot:</strong> [Insert your chosen camera flagship &amp; current price]
+                <strong>Top Pick Slot:</strong> [Insert your chosen camera flagship & current price]
             </p>
         </div>
 
@@ -251,7 +202,7 @@ which pack significantly higher energy density into the exact same physical foot
                 <strong>What to look for:</strong> 6,500mAh to 8,000mAh silicon-carbon battery, power-efficient chipset, and fast wired charging with battery health protection features.
             </p>
             <p>
-                <strong>Top Pick Slot:</strong> [Insert your chosen battery phone &amp; current price]
+                <strong>Top Pick Slot:</strong> [Insert your chosen battery phone & current price]
             </p>
         </div>
 
@@ -264,7 +215,7 @@ which pack significantly higher energy density into the exact same physical foot
                 <strong>What to look for:</strong> Clean 120Hz AMOLED screen, 256GB base storage (UFS 3.1 or faster), OIS on the main camera, and minimal bloatware.
             </p>
             <p>
-                <strong>Top Pick Slot:</strong> [Insert your chosen mid-range pick &amp; current price]
+                <strong>Top Pick Slot:</strong> [Insert your chosen mid-range pick & current price]
             </p>
         </div>
 
@@ -277,7 +228,7 @@ which pack significantly higher energy density into the exact same physical foot
                 <strong>What to look for:</strong> 5G connectivity, at least 6GB to 8GB of RAM, a 5,000mAh+ battery, and clean software without intrusive system ads.
             </p>
             <p>
-                <strong>Top Pick Slot:</strong> [Insert your chosen budget pick &amp; current price]
+                <strong>Top Pick Slot:</strong> [Insert your chosen budget pick & current price]
             </p>
         </div>
 
@@ -290,7 +241,7 @@ which pack significantly higher energy density into the exact same physical foot
             <li><strong>Overpaying for yearly upgrades:</strong> If your current phone is less than two years old, has good battery health, and still receives security patches, waiting another cycle usually gives you a much bigger leap in value.</li>
         </ul>
 
-        <!-- SECTION 4: FAQ (Strong for Google Featured Snippets) -->
+        <!-- SECTION 4: FAQ -->
         <h2 id="faq">4. Frequently Asked Questions</h2>
 
         <div class="faq-item animate-on-scroll">
@@ -324,91 +275,104 @@ which pack significantly higher energy density into the exact same physical foot
     </section>
 </article>
 
-<section class="blog-content">
-    
-    <!-- No animation, loads immediately -->
-    <p>
-        As we approach the end of the year, the smartphone market is experiencing its most dramatic hardware shift in a decade. If you have been keeping up with deep-dives on digital platforms like GSMArena and TechRepublic, you already know the buzz: iterative camera tweaks are out, and foundational tech changes are in.
-    </p>
-
-    <h3>The Rise of Agentic AI</h3>
-    <!-- Animates when scrolled to -->
-    <p class="animate-on-scroll">
-        Until now, AI on smartphones has mostly been cloud-reliant chatbots. Late 2026 flagships are officially moving toward "on-device agentic AI". These are smart agents running entirely on the phone's local silicon that can perform autonomous, cross-app actions.
-    </p>
-
-    <h3>Silicon-Carbon Battery Breakthroughs</h3>
-    <!-- Animates when scrolled to -->
-    <p class="animate-on-scroll">
-        Perhaps the most exciting physical hardware upgrade is the mainstream adoption of silicon-carbon battery technology. This new chemistry is allowing manufacturers to cram massive 8,000mAh battery capacities into standard, ultra-slim form factors. 
-    </p>
-
-    <!-- Combined drop shadow card and scroll animation -->
-    <div class="important-card animate-on-scroll">
-        <h4>The Takeaway</h4>
-        <p style="margin-bottom: 0;">
-            The late 2026 upgrade cycle is actually worth the hype. If you have been holding onto an older device waiting for a tangible leap in battery chemistry and local processing power, the incoming wave of flagships is exactly what you have been waiting for.
-        </p>
-    </div>
-
-</section>
-
-<!-- POST 1: THE 2026 SHIFT -->
-<header class="welcome-section temp">
-    <h2>Tech Blog</h2>
-    <h1>The 2026 Shift: Why Pure HTML & CSS is Making a Massive Comeback</h1>
-    <p>Published on November 18, 2026</p>
-</header>
-
-<section class="temp">
-    <p>
-        For the last decade, the web development industry has been obsessed with massive JavaScript frameworks. While powerful, this trend led to a web that feels sluggish, bloated, and drains mobile batteries. But the latest updates in web technology are sparking a major reversal. 
-    </p>
-
-    <h3>Browsers Have Caught Up</h3>
-    <p>
-        The biggest tech update in modern web design isn't a new framework—it is the browsers themselves. Features that used to require heavy external scripts, like smooth scroll animations, native CSS nesting, and dark mode toggles, are now built directly into modern browsers. 
-    </p>
-
-    <p>
-        This means developers can now build incredibly complex, interactive layouts using nothing but pure HTML and CSS. The result? Websites that load in milliseconds instead of seconds.
-    </p>
-
-    <h3>Speed is the New SEO Standard</h3>
-    <p>
-        Search engines have drastically tightened their Core Web Vitals requirements. If a site takes too long to render because it is downloading massive libraries, it will lose its ranking. By stripping away the bloat and returning to semantic HTML and optimized CSS, brands are seeing instant boosts in both search visibility and user retention.
-    </p>
-
-    <div class="blog-takeaway">
-        <h4>The Takeaway</h4>
+<!-- OLDER POST 1: LATE 2026 SMARTPHONE HARDWARE SHIFT -->
+<article>
+    <section class="blog-content old-post">
         <p>
-            Flashy frameworks have their place, but for local businesses, portfolios, and landing pages, speed is king. If your website feels slow, it might be time to audit your code and go back to the basics.
+            As we approach the end of the year, the smartphone market is experiencing its most dramatic hardware shift in a decade. If you have been keeping up with deep-dives on digital platforms like GSMArena and TechRepublic, you already know the buzz: iterative camera tweaks are out, and foundational tech changes are in.
         </p>
-    </div>
-</section>
 
-<!-- POST 2: UNDERSTANDING WEB PERFORMANCE -->
-<header class="welcome-section temp">
-    <h1>Understanding Web Performance</h1>
-    <p>Published on November 16, 2026</p>
-</header>
+        <div class="extra-content">
+            <h3>The Rise of Agentic AI</h3>
+            <p>
+                Until now, AI on smartphones has mostly been cloud-reliant chatbots. Late 2026 flagships are officially moving toward "on-device agentic AI". These are smart agents running entirely on the phone's local silicon that can perform autonomous, cross-app actions.
+            </p>
 
-<section class="about temp">
-    <img src="tech-setup.jpg" alt="My tech setup">
-    
-    <p>
-        Today I was testing some new CSS layouts. I found that optimizing your flexbox containers can make a massive difference on mobile screens. 
-    </p>
+            <h3>Silicon-Carbon Battery Breakthroughs</h3>
+            <p>
+                Perhaps the most exciting physical hardware upgrade is the mainstream adoption of silicon-carbon battery technology. This new chemistry is allowing manufacturers to cram massive 8,000mAh battery capacities into standard, ultra-slim form factors.
+            </p>
 
-    <h3>Why Mobile Optimization Matters</h3>
-    <p>
-        When elements wrap incorrectly, it pushes content off the screen and ruins the user experience. By forcing text wrapping rules, you keep the design intact.
-    </p>
-</section>
+            <div class="important-card">
+                <h4>The Takeaway</h4>
+                <p style="margin-bottom: 0;">
+                    The late 2026 upgrade cycle is actually worth the hype. If you have been holding onto an older device waiting for a tangible leap in battery chemistry and local processing power, the incoming wave of flagships is exactly what you have been waiting for.
+                </p>
+            </div>
+        </div>
+
+        <button class="read-more-btn" type="button">Continue to read</button>
+    </section>
+</article>
+
+<!-- OLDER POST 2: THE 2026 SHIFT -->
+<article>
+    <header class="welcome-section temp">
+        <h2>Tech Blog</h2>
+        <h1>The 2026 Shift: Why Pure HTML & CSS is Making a Massive Comeback</h1>
+        <p>Published on November 18, 2026</p>
+    </header>
+
+    <section class="blog-content temp old-post">
+        <p>
+            For the last decade, the web development industry has been obsessed with massive JavaScript frameworks. While powerful, this trend led to a web that feels sluggish, bloated, and drains mobile batteries. But the latest updates in web technology are sparking a major reversal.
+        </p>
+
+        <div class="extra-content">
+            <h3>Browsers Have Caught Up</h3>
+            <p>
+                The biggest tech update in modern web design isn't a new framework—it is the browsers themselves. Features that used to require heavy external scripts, like smooth scroll animations, native CSS nesting, and dark mode toggles, are now built directly into modern browsers.
+            </p>
+
+            <p>
+                This means developers can now build incredibly complex, interactive layouts using nothing but pure HTML and CSS. The result? Websites that load in milliseconds instead of seconds.
+            </p>
+
+            <h3>Speed is the New SEO Standard</h3>
+            <p>
+                Search engines have drastically tightened their Core Web Vitals requirements. If a site takes too long to render because it is downloading massive libraries, it will lose its ranking. By stripping away the bloat and returning to semantic HTML and optimized CSS, brands are seeing instant boosts in both search visibility and user retention.
+            </p>
+
+            <div class="blog-takeaway">
+                <h4>The Takeaway</h4>
+                <p>
+                    Flashy frameworks have their place, but for local businesses, portfolios, and landing pages, speed is king. If your website feels slow, it might be time to audit your code and go back to the basics.
+                </p>
+            </div>
+        </div>
+
+        <button class="read-more-btn" type="button">Continue to read</button>
+    </section>
+</article>
+
+<!-- OLDER POST 3: UNDERSTANDING WEB PERFORMANCE -->
+<article>
+    <header class="welcome-section temp">
+        <h1>Understanding Web Performance</h1>
+        <p>Published on November 16, 2026</p>
+    </header>
+
+    <section class="blog-content about temp old-post">
+        <img src="tech-setup.jpg" alt="My tech setup">
+
+        <p>
+            Today I was testing some new CSS layouts. I found that optimizing your flexbox containers can make a massive difference on mobile screens.
+        </p>
+
+        <div class="extra-content">
+            <h3>Why Mobile Optimization Matters</h3>
+            <p>
+                When elements wrap incorrectly, it pushes content off the screen and ruins the user experience. By forcing text wrapping rules, you keep the design intact.
+            </p>
+        </div>
+
+        <button class="read-more-btn" type="button">Continue to read</button>
+    </section>
+</article>
 
 <!-- KEEP YOUR FOOTER -->
 <footer>
-    <p>&copy; <span id="year"></span> Tech<span>Horizon</span>. All rights reserved.</p>
+    <p>© <span id="year"></span> Tech<span>Horizon</span>. All rights reserved.</p>
 </footer>
 
 </body>

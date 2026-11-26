@@ -771,7 +771,7 @@ footer span {
 
 .blog-button {
     display: flex;
-    bordor: #2563EB 2px dotted /* Royal blue */
+    bordor: #2563EB 2px dotted; /* Royal blue */
     color: var(--text);
     margin: 12px auto;
     border-radius: 8px;

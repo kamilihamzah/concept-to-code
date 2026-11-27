@@ -801,6 +801,9 @@ footer span {
     font-size: 1.1rem;
     transition: all 0.3s ease;
 }
+.blog-button a {
+   text-decoration: none;
+   color: var(--primary);
 
 .blog-button::after {
     content: "→";

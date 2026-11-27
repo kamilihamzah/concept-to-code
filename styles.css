@@ -773,6 +773,7 @@ footer span {
     display: flex;
     bordor: #2563EB 2px dotted; /* Royal blue */
     color: var(--text);
+    text-align: center;
     margin: 12px auto;
     border-radius: 8px;
     text-decoration: none;
